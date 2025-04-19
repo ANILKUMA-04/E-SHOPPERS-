@@ -1,0 +1,193 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url() no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1; /* Ensure the background is behind everything */
+}
+
+/* Move the login card and details to the left side */
+.login-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure content is above the background */
+  padding-left: 2rem; /* Add padding to the left */
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  z-index: 2; /* Ensure the login card is above the background */
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: adds a border to the card */
+  box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  overflow: hidden; /* Prevents overflow of content */
+}
+
+.login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color:black;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 600;
+  
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  background-color: white;
+  color: black;   
+}
+
+input {
+  pointer-events: auto;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #ffe6e6;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.login-button {
+  background-color:black;
+  border: 2px solid #007bff;
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #007bff;
+}
+
+.login-button:hover {
+  background-color:#ff4d4f  ;
+  color: black;
+  /* transform: scale(1.05); Slightly enlarge the button on hover */
+  /* box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); Add a shadow effect on hover */
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.google-login, .facebook-login {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.google-login:hover {
+  background-color: #f1f1f1;
+}
+
+.facebook-login:hover {
+  background-color: #f1f1f1;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3; /* Ensure the loading spinner is above everything */
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 2.5rem; /* Add space for the toggle button */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #007bff;
+  padding: 0;
+}
+
+

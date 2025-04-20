@@ -10,3 +10,18 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Running Commands
+
+To run any npm commands, ensure you are in the `ecommerce-app` directory. For example:
+
+```bash
+cd ecommerce-app
+npm run build
+```
+
+Alternatively, you can use the `build.bat` script located in the root directory (`E-SHOPPERS`) to automatically navigate to the correct directory and run the build command:
+
+```bash
+build.bat
+```
